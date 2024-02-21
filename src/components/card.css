@@ -1,11 +1,27 @@
 .card {
     /* background-color: red; */
+    display: flex;
+    flex-flow: column;
     min-width: 200px;
-    padding: 2rem 0.5rem;
-    justify-content: center;
+    padding: 2rem 0.2rem;
+    justify-content: space-around;
     align-items: center;
     border-radius: 1rem;
     color: black;
     border: solid black 4px;
     max-height: 200px;
+}
+
+.card > h1 {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.card > img {
+    width: 100%;
+    max-width: 100px;
+}
+
+.card > * {
+    margin: 0;
 }

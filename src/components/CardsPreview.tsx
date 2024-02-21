@@ -3,10 +3,10 @@ import "./cards-preview.css"
 const CardsPreview = () => {
     return (
         <div className="cards-wrapper">
-            <WeatherCard name="Toronto" date="friday 23rd" temp="24°" weather="rainy"/>
-            <WeatherCard name="los santons" date="friday 111th" temp="190°" weather="cloudy"/>
-            <WeatherCard name="los santons" date="friday 111th" temp="190°" weather="cloudy"/>
-            <WeatherCard name="los santons" date="friday 111th" temp="190°" weather="cloudy"/>
+            <WeatherCard name="Toronto, Canada" temp="24°" weather="sunny"/>
+            <WeatherCard name="los santons" temp="190°" weather="cloudy"/>
+            <WeatherCard name="los santons" temp="190°" weather="rainy"/>
+            <WeatherCard name="los santons" temp="190°" weather="snow"/>
         </div>
     )    
 }
