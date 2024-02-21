@@ -1,0 +1,34 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input-container {
+  /* background: linear-gradient(#e66465, #9198e5); */
+  height: 50px;
+  margin-block: 2rem;
+  display: flex;
+  max-width: 500px;
+  justify-content: center;
+  padding-inline: 0.5rem;
+  border-bottom: solid 4px black;
+}
+input {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.2rem 0.4rem;
+  color: black;
+}
+
+input:focus {
+  outline: none;
+}
