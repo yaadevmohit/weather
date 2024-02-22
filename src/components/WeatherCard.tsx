@@ -3,35 +3,52 @@ import sunnySvg from "../assets/sunny.png"
 import cloudySvg from "../assets/cloudy.png"
 import rainySvg from "../assets/rainy.png"
 import snowSvg from "../assets/snowflake.png"
-import dustSvg from "../assets/dust-xxl.png"
+import nightPartlyCloudySvg from "../assets/night-partly-cloudy.png"
+import nightMistSvg from "../assets/night-mist.png"
+import OvercastSvg from "../assets/day-overcast.png"
+import nightClearSvg from "../assets/night-clear.png"
 
 interface WeatherCardProps {
     name: string;
     temp: string;
     weather: string;
+    isDay: number;
+    icon: string;
+    country: string;
 }
 
 interface weatherIcons {
-    [key: string]: string;    
+    day: {[key: string]: string};
+    night: {[key: string]: string};
 }
 
-const WeatherCard: React.FC<WeatherCardProps> = ({name, temp, weather}) => {
+const WeatherCard: React.FC<WeatherCardProps> = ({name, temp, weather, isDay, icon, country}) => {
     
     const weatherIcons: weatherIcons = {
-        sunny: sunnySvg,
-        cloudy: cloudySvg,
-        rainy: rainySvg,
-        snow: snowSvg
-    }
+        day: {
+            "Sunny": sunnySvg,
+            "Clear": sunnySvg,
+            "Partly cloudy": cloudySvg,
+            rainy: rainySvg,
+            snow: snowSvg,
+            Overcast: OvercastSvg,
+        },
+        night: {
+            "Clear": nightClearSvg,
+            "Partly cloudy": nightPartlyCloudySvg,
+            "Mist": nightMistSvg,
+            Overcast: OvercastSvg,
+        }
 
-    const icon = weatherIcons[weather] || dustSvg
+    }
+    const weatherIcon = isDay && weatherIcons.day[weather] || weatherIcons.night[weather] || icon
     
     return(
-        <div className={`card`}>
-            <img src={icon} alt={`${weather} png by freepik`} />
+        <div className={`card ${!isDay && "dark"}`}>
+            <img src={weatherIcon} alt={`${weather} png by freepik`} />
             <span>{weather}</span>
-            <h1>{temp}</h1>
-            <p>{name}</p>
+            <h1>{`${temp}°`}</h1>
+            <p>{`${name}, ${country}`}</p>
         </div>
     )
 }
