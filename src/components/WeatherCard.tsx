@@ -1,8 +1,8 @@
 import "./card.css"
-import sunnySvg from "../assets/sun-xxl.png"
-import cloudySvg from "../assets/cloudy-xxl.png"
-import rainySvg from "../assets/rain-xxl.png"
-import snowSvg from "../assets/snow-xxl.png"
+import sunnySvg from "../assets/sunny.png"
+import cloudySvg from "../assets/cloudy.png"
+import rainySvg from "../assets/rainy.png"
+import snowSvg from "../assets/snowflake.png"
 import dustSvg from "../assets/dust-xxl.png"
 
 interface WeatherCardProps {
@@ -28,7 +28,8 @@ const WeatherCard: React.FC<WeatherCardProps> = ({name, temp, weather}) => {
     
     return(
         <div className={`card`}>
-            <img src={icon} alt={`${weather} png`} />
+            <img src={icon} alt={`${weather} png by freepik`} />
+            <span>{weather}</span>
             <h1>{temp}</h1>
             <p>{name}</p>
         </div>
