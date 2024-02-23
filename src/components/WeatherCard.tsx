@@ -4,7 +4,7 @@ import cloudySvg from "../assets/cloudy.png"
 import rainySvg from "../assets/rainy.png"
 import snowSvg from "../assets/snowflake.png"
 import nightPartlyCloudySvg from "../assets/night-partly-cloudy.png"
-import nightMistSvg from "../assets/night-mist.png"
+import mistSvg from "../assets/mist.png"
 import OvercastSvg from "../assets/day-overcast.png"
 import nightClearSvg from "../assets/night-clear.png"
 
@@ -30,18 +30,19 @@ const WeatherCard: React.FC<WeatherCardProps> = ({name, temp, weather, isDay, ic
             "Clear": sunnySvg,
             "Partly cloudy": cloudySvg,
             rainy: rainySvg,
+            Mist: mistSvg,
             snow: snowSvg,
             Overcast: OvercastSvg,
         },
         night: {
             "Clear": nightClearSvg,
             "Partly cloudy": nightPartlyCloudySvg,
-            "Mist": nightMistSvg,
+            "Mist": mistSvg,
             Overcast: OvercastSvg,
         }
 
     }
-    const weatherIcon = isDay && weatherIcons.day[weather] || weatherIcons.night[weather] || icon
+    const weatherIcon = (isDay ? weatherIcons.day[weather] : weatherIcons.night[weather]) || icon
     
     return(
         <div className={`card ${!isDay && "dark"}`}>
