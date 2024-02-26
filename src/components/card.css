@@ -1,5 +1,5 @@
 .card {
-    background-color: skyblue;
+    background-color: rgb(184, 223, 239);
     display: flex;
     flex-flow: column;
     min-width: 200px;
@@ -12,8 +12,7 @@
 }
 
 .card > h1 {
-    font-size: 4rem;
-    font-weight: 900;
+    font-size: 3.5rem;
 }
 
 .card > img {
@@ -27,6 +26,6 @@
 
 
 .card.dark {
-    background-color: rgb(12, 12, 75);
+    background-color: rgb(8, 8, 53);
     color: aliceblue;
 }

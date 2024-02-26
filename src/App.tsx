@@ -2,6 +2,8 @@ import './App.css'
 import CardsPreview from './components/CardsPreview'
 import searchSvg from "./assets/icons8-search.svg"
 function App() {
+
+  function onChange() {}
   return (
     <>
       <main>
@@ -9,7 +11,7 @@ function App() {
           <input type="text" placeholder='Search a place'/>
           <img src={searchSvg} />
         </div>
-        <CardsPreview />
+        <CardsPreview /> 
       </main>
     </>
   )

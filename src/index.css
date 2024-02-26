@@ -1,8 +1,8 @@
 :root {
   font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
-  font-weight: normal;
+  /* font-weight: normal; */
   line-height: 1.5;
-  font-weight: 400;
+  /* font-weight: 400; */
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -24,6 +24,9 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+  font-weight: 900;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
