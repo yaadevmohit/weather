@@ -1,0 +1,11 @@
+.details-wrapper {
+    color: black;
+    background-color: var(--clr-bg-card-day);
+    min-height: 400px;
+    width: auto;
+    padding: 2rem;
+}
+
+.main-details {
+    display: flex;
+}

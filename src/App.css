@@ -5,6 +5,14 @@
   text-align: center;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -12,12 +20,12 @@ main {
   align-items: center;
 }
 .input-container {
-  /* background: linear-gradient(#e66465, #9198e5); */
   height: 50px;
   margin-block: 2rem;
   display: flex;
   max-width: 500px;
   justify-content: center;
+  align-items: center;
   padding-inline: 0.5rem;
   border-bottom: solid 4px black;
 }

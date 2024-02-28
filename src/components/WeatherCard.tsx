@@ -7,7 +7,8 @@ import nightPartlyCloudySvg from "../assets/night-partly-cloudy.png"
 import mistSvg from "../assets/mist.png"
 import OvercastSvg from "../assets/day-overcast.png"
 import nightClearSvg from "../assets/night-clear.png"
-
+import lightRainSvg from "../assets/light-rain.png"
+import thunderRainSvg from "../assets/thunder-rain.png"
 interface WeatherCardProps {
     name: string;
     temp: string;
@@ -33,19 +34,24 @@ const WeatherCard: React.FC<WeatherCardProps> = ({name, temp, weather, isDay, ic
             Mist: mistSvg,
             snow: snowSvg,
             Overcast: OvercastSvg,
+            "Light rain": lightRainSvg,
+            "Moderate or heavy rain with thunder": thunderRainSvg,
+
         },
         night: {
             "Clear": nightClearSvg,
             "Partly cloudy": nightPartlyCloudySvg,
             "Mist": mistSvg,
             Overcast: OvercastSvg,
+            "Light rain": lightRainSvg,
+            "Moderate or heavy rain with thunder": thunderRainSvg,
         }
 
     }
     const weatherIcon = (isDay ? weatherIcons.day[weather] : weatherIcons.night[weather]) || icon
     
     return(
-        <div className={`card ${!isDay && "dark"}`}>
+        <div className={`card${!isDay ? " dark" : ""}`}>
             <img src={weatherIcon} alt={`${weather} png by freepik`} />
             <span>{weather}</span>
             <h1>{`${temp}°`}</h1>

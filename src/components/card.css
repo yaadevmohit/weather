@@ -1,24 +1,30 @@
 .card {
-    background-color: rgb(184, 223, 239);
+    background-color: var(--clr-bg-card-day);
     display: flex;
     flex-flow: column;
     min-width: 200px;
-    padding: 2rem 0.2rem;
-    justify-content: space-around;
+    padding: 1rem 0.4rem;
+    /* justify-content: space-around; */
     align-items: center;
     border-radius: 1rem;
     color: black;
-    max-height: 200px;
+    max-height: 260px;
+    max-width: 150px;
+    box-shadow: 1px 1px 5px yellow;
 }
 
 .card > h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
 }
 
 .card > img {
     width: 100%;
     max-width: 100px;
 }
+
+.card > span {
+    font-size: 0.9rem;
+} 
 
 .card > * {
     margin: 0;
@@ -28,4 +34,5 @@
 .card.dark {
     background-color: rgb(8, 8, 53);
     color: aliceblue;
+    box-shadow: 1px 1px 7px rgb(58, 20, 172);
 }

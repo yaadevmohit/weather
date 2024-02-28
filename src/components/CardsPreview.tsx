@@ -5,7 +5,7 @@ import "./cards-preview.css"
 
 const CardsPreview = () => {
 
-    const places: string[] = ["Toronto", "London", "New Delhi", "Melbourne"]
+    const places: string[] = ["Toronto", "London", "New Delhi", "Sydney"]
     const [placesData, setPlacesData] = useState([])
     
     async function getWeatherInfo(place: string) {
@@ -33,11 +33,15 @@ const CardsPreview = () => {
     }
     useEffect(() => {getPlacesData()}, [])
     return (
-        <div className="cards-wrapper">
-            {placesData.map(place => {
-                return(<WeatherCard name={place.name} temp={place.temp} weather={place.weather} isDay={place.isDay} icon={place.icon} country={place.country}/>)
-            })}
-        </div>
+        <>
+            
+            <div className="cards-wrapper">
+                <h1>Popular Cities</h1>
+                {placesData.map(place => {
+                    return(<WeatherCard name={place.name} temp={place.temp} weather={place.weather} isDay={place.isDay} icon={place.icon} country={place.country}/>)
+                })}
+            </div>
+        </>
     )    
 }
 
