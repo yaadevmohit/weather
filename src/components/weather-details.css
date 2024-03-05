@@ -1,11 +1,79 @@
 .details-wrapper {
-    color: black;
+    color: rgb(5, 7, 104);
     background-color: var(--clr-bg-card-day);
     min-height: 400px;
     width: auto;
-    padding: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    /* border: solid 4px teal; */
+    display: flex;
+    flex-direction: column;
 }
 
 .main-details {
     display: flex;
+    align-items: center;
+    gap: 2rem;
 }
+
+.main-details > * {
+    display: flex;
+    flex-flow: column;
+}
+
+.main-info {
+    max-width: 200px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    height: fit-content;
+}
+
+.main-info > h1 {
+    font-size: 4rem;
+}
+.main-info > * {
+    width: 100%;
+}
+
+.main-info > h1 > img {
+    max-height: 1em;
+    vertical-align: middle;
+}
+
+.main-details > * {
+    margin: 0;
+}
+
+.other-info {
+    padding: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.other-info > * {
+    margin-block: 0.5rem;
+}
+
+.forecast-container {
+    /* border: solid red 2px; */
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 4px solid black; */
+}
+
+.forecast-item > img {
+    max-height: 4rem;
+    margin-block: 0.5rem;
+}
+

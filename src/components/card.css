@@ -10,7 +10,6 @@
     color: black;
     max-height: 260px;
     max-width: 150px;
-    box-shadow: 1px 1px 5px yellow;
 }
 
 .card > h1 {
@@ -34,5 +33,4 @@
 .card.dark {
     background-color: rgb(8, 8, 53);
     color: aliceblue;
-    box-shadow: 1px 1px 7px rgb(58, 20, 172);
 }

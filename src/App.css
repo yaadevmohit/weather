@@ -40,3 +40,8 @@ input {
 input:focus {
   outline: none;
 }
+
+h1, span, p {
+  margin: 0;
+  padding: 0;
+}
