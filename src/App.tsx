@@ -12,8 +12,8 @@ function App() {
           <input type="text" placeholder='Search a place'/>
           <button><img src={searchSvg} /></button>
         </div>
-        {/* <CardsPreview />  */}
-        <WeatherDetails />
+        <CardsPreview /> 
+        {/* <WeatherDetails /> */}
       </main>
     </>
   )
