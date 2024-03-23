@@ -11,24 +11,25 @@ interface PlaceDataInterface {
     country: string;
 }
 
+
+const getWeatherInfo = async (place: string) => {
+    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=4ed03868d14e46b486b154315241302&q=${place}&aqi=no`)
+    const weatherData = await response.json();
+    const resultData: PlaceDataInterface = {
+        name: weatherData.location.name,
+        temp: weatherData.current.temp_c,
+        weather: weatherData.current.condition.text,
+        isDay: weatherData.current.is_day,
+        icon: weatherData.current.condition.icon,
+        country: weatherData.location.country
+    }
+    return resultData
+} 
 const CardsPreview = () => {
 
     const places: string[] = ["Toronto", "London", "New Delhi", "Sydney"]
     const [placesData, setPlacesData] = useState<PlaceDataInterface[]>([])
     
-    async function getWeatherInfo(place: string) {
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=4ed03868d14e46b486b154315241302&q=${place}&aqi=no`)
-        const weatherData = await response.json();
-        const resultData: PlaceDataInterface = {
-            name: weatherData.location.name,
-            temp: weatherData.current.temp_c,
-            weather: weatherData.current.condition.text,
-            isDay: weatherData.current.is_day,
-            icon: weatherData.current.condition.icon,
-            country: weatherData.location.country
-        }
-        return resultData
-    }   
 
     async function getPlacesData() {
         // for (const place of places) {

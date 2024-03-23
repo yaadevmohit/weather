@@ -23,31 +23,31 @@ interface weatherIcons {
     night: {[key: string]: string};
 }
 
+const weatherIcons: weatherIcons = {
+    day: {
+        "Sunny": sunnySvg,
+        "Clear": sunnySvg,
+        "Partly cloudy": cloudySvg,
+        rainy: rainySvg,
+        Mist: mistSvg,
+        snow: snowSvg,
+        Overcast: OvercastSvg,
+        "Light rain": lightRainSvg,
+        "Moderate or heavy rain with thunder": thunderRainSvg,
+
+    },
+    night: {
+        "Clear": nightClearSvg,
+        "Partly cloudy": nightPartlyCloudySvg,
+        "Mist": mistSvg,
+        Overcast: OvercastSvg,
+        "Light rain": lightRainSvg,
+        "Moderate or heavy rain with thunder": thunderRainSvg,
+    }
+
+}
 const WeatherCard: React.FC<WeatherCardProps> = ({name, temp, weather, isDay, icon, country}) => {
     
-    const weatherIcons: weatherIcons = {
-        day: {
-            "Sunny": sunnySvg,
-            "Clear": sunnySvg,
-            "Partly cloudy": cloudySvg,
-            rainy: rainySvg,
-            Mist: mistSvg,
-            snow: snowSvg,
-            Overcast: OvercastSvg,
-            "Light rain": lightRainSvg,
-            "Moderate or heavy rain with thunder": thunderRainSvg,
-
-        },
-        night: {
-            "Clear": nightClearSvg,
-            "Partly cloudy": nightPartlyCloudySvg,
-            "Mist": mistSvg,
-            Overcast: OvercastSvg,
-            "Light rain": lightRainSvg,
-            "Moderate or heavy rain with thunder": thunderRainSvg,
-        }
-
-    }
     const weatherIcon = (isDay ? weatherIcons.day[weather] : weatherIcons.night[weather]) || icon
     
     return(
