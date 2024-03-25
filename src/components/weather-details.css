@@ -10,6 +10,11 @@
     flex-direction: column;
 }
 
+.details-wrapper.dark {
+    background-color: rgb(8, 8, 53);
+    color: aliceblue;
+}
+
 .main-details {
     display: flex;
     align-items: center;

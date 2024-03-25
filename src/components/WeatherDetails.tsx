@@ -1,23 +1,23 @@
 import "./weather-details.css"
 import cloudySvg from "../assets/cloudy.png";
-const WeatherDetails = () => {
+const WeatherDetails = ({name, country, time, temp, isDay, condition, windSpeed, feelsLike, humidity, icon}) => {
     return (
-        <div className="details-wrapper">
+        <div className={`details-wrapper${!isDay ? " dark" : ""}`}>
             <div className="main-details">
                 <div className="city-info">
-                    <h1>Toronto, Canada</h1>
+                    <h1>{`${name}, ${country}`}</h1>
                     <span>Friday, March 1 2024</span>
                     <h1>20:24</h1>
                 </div>
                 <div className="main-info">
-                    <h1>-3°<img src={cloudySvg} alt="" /> </h1>
-                    <span>Cloudy</span>
+                    <h1>{temp}°<img src={icon} alt="" /> </h1>
+                    <span>{condition}</span>
                     <span>H:11°C L:5°C</span>
                 </div>
                 <div className="other-info">
-                    <span>Feels Like: 15°C</span>
-                    <span>Wind: 23m/s</span>
-                    <span>Humidity: 46%</span>
+                    <span>Feels Like: {feelsLike}°C</span>
+                    <span>Wind: {windSpeed} km/h</span>
+                    <span>Humidity: {humidity}%</span>
                 </div>
             </div>
             <div className="forecast-container">
